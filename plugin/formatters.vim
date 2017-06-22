@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2017-04-01T16:00:30+0800
+" Last Modified: 2017-06-22T18:00:20+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -46,4 +46,3 @@ augroup formatters
 augroup END
 
 nnoremap <Plug>Reformat :call formatters#Reformat()<CR>
-nmap <Leader>fa <Plug>Reformat
