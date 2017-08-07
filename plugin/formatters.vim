@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2017-08-07T16:16:45+0800
+" Last Modified: 2017-08-07T16:24:01+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -30,17 +30,18 @@ let s:default_programs = {
 augroup formatters
     autocmd!
 
-    for l:ft in keys(s:default_programs)
-        if executable(s:default_programs[l:ft]['program'])
-            let l:prog = escape(s:default_programs[l:ft]['program'] . ' ' . get(s:default_programs[l:ft], 'args', ''), ' "')
-            execute('autocmd FileType ' . l:ft . ' setlocal formatprg=' . l:prog)
+    let s:ft = ''
+    for s:ft in keys(s:default_programs)
+        if executable(s:default_programs[s:ft]['program'])
+            let s:prog = escape(s:default_programs[s:ft]['program'] . ' ' . get(s:default_programs[s:ft], 'args', ''), ' "')
+            execute('autocmd FileType ' . s:ft . ' setlocal formatprg=' . s:prog)
         endif
     endfor
 
-    for l:ft in keys(g:formatters_programs)
-        if executable(g:formatters_programs[l:ft]['program'])
-            let l:prog = escape(g:formatters_programs[l:ft]['program'] . ' ' . get(g:formatters_programs[l:ft], 'args', ''), ' "')
-            execute('autocmd FileType ' . l:ft . ' setlocal formatprg=' . l:prog)
+    for s:ft in keys(g:formatters_programs)
+        if executable(g:formatters_programs[s:ft]['program'])
+            let l:prog = escape(g:formatters_programs[s:ft]['program'] . ' ' . get(g:formatters_programs[s:ft], 'args', ''), ' "')
+            execute('autocmd FileType ' . s:ft . ' setlocal formatprg=' . s:prog)
         endif
     endfor
 augroup END
