@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2018-07-12T17:47:13+0800
+" Last Modified: 2018-10-12T14:23:21+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -20,11 +20,11 @@ let s:default_programs = {
     \ 'go': {'program': 'gofmt'},
     \ 'html': {'program': 'js-beautify', 'args': '--type html'},
     \ 'javascript': {'program': 'js-beautify'},
+    \ 'markdown': {'program': 'prettier', 'args': '--parser markdown --stdin'},
     \ 'php': {'program': 'phpcbf', 'args': '--stdin-path --standard=PSR1,PSR2'},
-    \ 'python': {'program': 'yapf', 'args': ''},
+    \ 'python': {'program': 'autopep8', 'args': '-'},
     \ 'rust': {'program': 'rustfmt'},
-    \ 'sass': {'program': 'sass-convert', 'args': '-F sass -T sass'},
-    \ 'scss': {'program': 'sass-convert', 'args': '-F scss -T scss'},
+    \ 'scss': {'program': 'prettier', 'args': '--parser scss --stdin'},
 \ }
 
 augroup formatters
