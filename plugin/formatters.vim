@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2018-10-15T14:25:29+0800
+" Last Modified: 2020-04-21T18:31:15+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -20,13 +20,13 @@ let s:default_programs = {
     \ 'go': {'program': 'gofmt'},
     \ 'html': {'program': 'js-beautify', 'args': '--type html'},
     \ 'javascript': {'program': 'js-beautify'},
-    \ 'json': {'program': 'prettier', 'args': '--parser json --tab-width 4 --stdin'},
-    \ 'markdown': {'program': 'prettier', 'args': '--parser markdown --stdin'},
+    \ 'json': {'program': 'prettier', 'args': '--parser json --tab-width 4'},
+    \ 'markdown': {'program': 'prettier', 'args': '--parser markdown'},
     \ 'php': {'program': 'phpcbf', 'args': '--stdin-path --standard=PSR1,PSR2'},
     \ 'python': {'program': 'autopep8', 'args': '-'},
     \ 'rust': {'program': 'rustfmt'},
-    \ 'scss': {'program': 'prettier', 'args': '--parser scss --tab-width 4 --stdin'},
-    \ 'yaml': {'program': 'prettier', 'args': '--parser yaml --tab-width 4 --stdin'},
+    \ 'scss': {'program': 'prettier', 'args': '--parser scss --tab-width 4'},
+    \ 'yaml': {'program': 'prettier', 'args': '--parser yaml --tab-width 4'},
 \ }
 
 augroup formatters
