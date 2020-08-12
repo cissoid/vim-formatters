@@ -23,7 +23,7 @@ let s:default_programs = {
     \ 'json': {'program': 'prettier', 'args': '--parser json --tab-width 4'},
     \ 'markdown': {'program': 'prettier', 'args': '--parser markdown'},
     \ 'php': {'program': 'phpcbf', 'args': '--stdin-path --standard=PSR1,PSR2'},
-    \ 'python': {'program': 'autopep8', 'args': '-'},
+    \ 'python': {'program': 'black', 'args': '-q -'},
     \ 'rust': {'program': 'rustfmt'},
     \ 'scss': {'program': 'prettier', 'args': '--parser scss --tab-width 4'},
     \ 'yaml': {'program': 'prettier', 'args': '--parser yaml --tab-width 4'},
