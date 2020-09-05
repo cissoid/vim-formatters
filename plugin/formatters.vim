@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2020-09-05T17:40:07+0800
+" Last Modified: 2020-09-05T17:41:36+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
