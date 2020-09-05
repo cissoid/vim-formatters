@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2020-04-21T18:31:15+0800
+" Last Modified: 2020-09-05T17:40:07+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -23,10 +23,11 @@ let s:default_programs = {
     \ 'json': {'program': 'prettier', 'args': '--parser json --tab-width 4'},
     \ 'markdown': {'program': 'prettier', 'args': '--parser markdown'},
     \ 'php': {'program': 'phpcbf', 'args': '--stdin-path --standard=PSR1,PSR2'},
-    \ 'python': {'program': 'autopep8', 'args': '-'},
+    \ 'python': {'program': 'black', 'args': '-q - 2>/dev/null'},
     \ 'rust': {'program': 'rustfmt'},
     \ 'scss': {'program': 'prettier', 'args': '--parser scss --tab-width 4'},
     \ 'yaml': {'program': 'prettier', 'args': '--parser yaml --tab-width 4'},
+    \ 'proto': {'program': 'clang-format', 'args': '-style="{BasedOnStyle: Google, IndentWidth: 4}"'},
 \ }
 
 augroup formatters
