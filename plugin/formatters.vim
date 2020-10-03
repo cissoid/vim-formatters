@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2020-09-05T17:41:36+0800
+" Last Modified: 2020-10-03T14:23:55+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -14,8 +14,8 @@ if !exists('g:formatters_program')
 endif
 
 let s:default_programs = {
-    \ 'c': {'program': 'clang-format', 'args': '-style="{BasedOnStyle: Google, IndentWidth: 4}"'},
-    \ 'cpp': {'program': 'clang-format', 'args': '-style="{BasedOnStyle: Google, IndentWidth: 4}"'},
+    \ 'c': {'program': 'clang-format', 'args': '-style=file'},
+    \ 'cpp': {'program': 'clang-format', 'args': '-style=file'},
     \ 'css': {'program': 'js-beautify', 'args': '--type css'},
     \ 'go': {'program': 'gofmt'},
     \ 'html': {'program': 'js-beautify', 'args': '--type html'},
@@ -27,7 +27,7 @@ let s:default_programs = {
     \ 'rust': {'program': 'rustfmt'},
     \ 'scss': {'program': 'prettier', 'args': '--parser scss --tab-width 4'},
     \ 'yaml': {'program': 'prettier', 'args': '--parser yaml --tab-width 4'},
-    \ 'proto': {'program': 'clang-format', 'args': '-style="{BasedOnStyle: Google, IndentWidth: 4}"'},
+    \ 'proto': {'program': 'clang-format', 'args': '-style=file'},
 \ }
 
 augroup formatters
