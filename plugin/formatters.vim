@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2020-12-22T11:08:11+0800
+" Last Modified: 2020-12-29T14:43:15+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -19,6 +19,7 @@ let s:default_programs = {
     \ 'css': {'program': 'js-beautify', 'args': '--type css'},
     \ 'go': {'program': 'gofmt'},
     \ 'html': {'program': 'js-beautify', 'args': '--type html'},
+    \ 'htmldjango': {'program': 'js-beautify', 'args': '--type html'},
     \ 'javascript': {'program': 'js-beautify'},
     \ 'json': {'program': 'prettier', 'args': '--parser json --tab-width 4'},
     \ 'markdown': {'program': 'prettier', 'args': '--parser markdown'},
