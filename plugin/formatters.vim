@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2020-12-29T14:43:15+0800
+" Last Modified: 2021-03-11T19:42:12+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -29,6 +29,7 @@ let s:default_programs = {
     \ 'scss': {'program': 'prettier', 'args': '--parser scss --tab-width 4'},
     \ 'yaml': {'program': 'prettier', 'args': '--parser yaml --tab-width 2'},
     \ 'proto': {'program': 'clang-format', 'args': '-style=file'},
+    \ 'lua': {'program': 'lua-format'},
 \ }
 
 augroup formatters
