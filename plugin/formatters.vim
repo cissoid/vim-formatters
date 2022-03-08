@@ -1,7 +1,7 @@
 " File Name: formatters.vim
 " Author: cissoid
 " Created At: 2017-04-01T12:02:53+0800
-" Last Modified: 2021-03-11T19:42:12+0800
+" Last Modified: 2022-03-08T18:25:56+0800
 scriptencoding utf-8
  
 if exists('g:formatters_loaded')
@@ -17,7 +17,7 @@ let s:default_programs = {
     \ 'c': {'program': 'clang-format', 'args': '-style=file'},
     \ 'cpp': {'program': 'clang-format', 'args': '-style=file'},
     \ 'css': {'program': 'js-beautify', 'args': '--type css'},
-    \ 'go': {'program': 'gofmt'},
+    \ 'go': {'program': 'goimports'},
     \ 'html': {'program': 'js-beautify', 'args': '--type html'},
     \ 'htmldjango': {'program': 'js-beautify', 'args': '--type html'},
     \ 'javascript': {'program': 'js-beautify'},
